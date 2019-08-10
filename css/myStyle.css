@@ -1,0 +1,71 @@
+
+body {
+    background-color: #404040;
+}
+
+.textHeader {
+    /*font-size: 26px;*/
+    /*padding-top: 20px;*/
+    /*font-family: "Arial Black";*/
+    /*font-family: cursive;*/
+    font: italic bold 26px Georgia serif;
+    color: azure;
+    text-shadow: 3px 3px black;
+    margin: 20px;
+    /*margin-top: 20px;
+    margin-bottom: 20px;*/
+}
+
+.borderCentral {
+    background-color: bisque;
+    border: azure 2px solid;
+    border-radius: 10px;
+    height: auto;
+}
+
+.signUpText {
+    font: italic bold 26px Georgia, serif;
+    color: black;
+    text-shadow: 3px 3px azure;
+    margin: 20px;
+}
+
+/*-------------------------------------------------------------
+	4. PAGE CONTENT PRODUCT
+-------------------------------------------------------------*/
+
+.page-content-product {}
+
+.main-product {
+    background-color: #09284b;
+    /*background-image: url('../images/bg_main.png');*/
+    padding-bottom: 180px;
+    background-position: center center;
+}
+
+.box-img {
+    background: #051d36;
+    text-align: center;
+    padding-bottom: 30px;
+    min-height: 280px;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: solid #007dea 3px;
+    transition: ease all 0.5s;
+}
+
+.box-img h4 {
+    color: #fff;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+    letter-spacing: 0px;
+}
+
+.box-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background: #007dea;
+}
