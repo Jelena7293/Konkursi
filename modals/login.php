@@ -1,6 +1,25 @@
 <?php
 
 session_start();
+include_once "config/loader_models.php";
+$usersModel = new usersModel();
+
+if (isset($_POST['login']))
+{
+    $check = $usersModel -> login($_POST);
+    if ($check == true)
+    {
+
+        //header('Location:index.php/adminPage');
+        //echo "usla";
+    }
+    else
+    {
+        echo '<div style="width:500px" class="alert alert-warning container">
+            <strong>Upozorenje!</strong> Unijeli ste pogrešne ili nepotpune podatke!</div>';
+    }
+}
+
 
 ?>
 <div class="modal" id="loginModal">

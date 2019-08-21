@@ -1,3 +1,29 @@
+<?php
+
+include_once "config/loader_models.php";
+$usersModel = new usersModel();
+$professionModel=new professionModel();
+$typeProfession=$professionModel->typeProfession();
+
+if (isset($_POST['registration']))
+{
+    $usersModel -> signUp($_POST);
+    /*$check = $usersModel -> signUp($_POST);
+    if ($check == true)
+    {
+
+        header('Location:index.php/adminPage');
+        //echo "usla";
+    }
+    else
+    {
+        echo '<div style="width:500px" class="alert alert-warning container">
+            <strong>Upozorenje!</strong> Unijeli ste pogrešne ili nepotpune podatke!</div>';
+    }*/
+}
+
+?>
+
 
 <div class="modal" id="signUpModal">
     <div class="modal-dialog">
@@ -19,7 +45,7 @@
                     </div>
                     <div class="form-group ">
                         <label for="usertype">Tip korisnika:</label>
-                        <select id="list"  type="text" class="form-control dropdown-toggle" data-toggle="dropdown">
+                        <select id="userType" name="userType"  type="text" class="form-control dropdown-toggle" data-toggle="dropdown">
                             <option value="select">- - - -</option>
                             <option value="professor">Professor</option>
                             <option value="student">Student</option>
@@ -27,7 +53,17 @@
                     </div>
                     <div class="form-group">
                         <label for="profession">Struka:</label>
-                        <input type="text" class="border form-control" id="profession" name="profession" placeholder="Izaberite oblast struke">
+                        <!--<input type="text" class="border form-control" id="profession" name="profession" placeholder="Izaberite oblast struke">-->
+                        <div class="row">
+                            <div class="col-sm-12" id="selectProfession">
+                                <select class="custom-select" name="professionSelect">
+                                    <option value="selectProfession">Izaberite oblast struke</option>
+                                    <?php foreach ($typeProfession as $professionSelect): ?>
+                                    <option value="<?= $professionSelect['id_profession']; ?>"><?= $professionSelect['profession_name']; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="username">Korisničko ime:</label>
@@ -40,7 +76,7 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="modal-footer row">
-                        <button type="button" class="btn btn-info" id="signUp">Registracija</button>
+                        <button type="submit" class="btn btn-info" id="registration" name="registration">Registracija</button>
                     </div>
                     <div class="row" style="font: italic bold 16px Georgia serif; color: azure; text-shadow: 1px 1px black; margin: 10px">
                         <div  style="margin: 5px">
