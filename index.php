@@ -23,12 +23,16 @@ include 'Views/Default/head.php';
         }
         if (isset($_SESSION["is_logged"]))
         {
-            if ($_SESSION["user_type"] == "Administrator")
+            if ($_SESSION["approved"] == 0)
+            {
+                include_once 'Views/notApproved.php';
+            }
+            elseif ($_SESSION["user_type"] == "Administrator")
             {
                 include_once "Views/adminPage.php";
 
             }
-            elseif ($_SESSION["user_type"] == "professor")
+            elseif ($_SESSION["user_type"] == "profesor")
             {
                 include_once "Views/professorPage.php";
             }

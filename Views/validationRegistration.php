@@ -8,7 +8,7 @@ if (HelperModel::isAjax()==true)
 
     if (isset($_GET['registration']))
     {
-        if ($_POST['first_name']!="" && $_POST['last_name']!="" && $_POST['user_type']!="- - - -" && $_POST['id_profession']!="Izaberite oblast struke" && $_POST['username']!="" && $_POST['password']!="")
+        if ($_POST['first_name']!="" && $_POST['last_name']!="" && $_POST['user_type']!="select" && $_POST['id_profession']!="selectProfession" && $_POST['username']!="" && $_POST['password']!="")
         {
             foreach ($users as $user)
             {

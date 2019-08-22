@@ -26,6 +26,10 @@ $(document).ready(function () {
         $('#signUpModal').modal('hide');
     });
 
+    $("#errorOk").on('click', function () {
+        $('#signUpModal').modal();
+    });
+
 
 
 

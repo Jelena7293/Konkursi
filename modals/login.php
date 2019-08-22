@@ -6,18 +6,17 @@ $usersModel = new usersModel();
 
 if (isset($_POST['login']))
 {
-    $check = $usersModel -> login($_POST);
-    if ($check == true)
-    {
+    $check = $usersModel->login($_POST);
+
+    if ($check == true) {
 
         //header('Location:index.php/adminPage');
         //echo "usla";
-    }
-    else
-    {
+    } else {
         echo '<div style="width:500px" class="alert alert-warning container">
             <strong>Upozorenje!</strong> Unijeli ste pogrešne ili nepotpune podatke!</div>';
     }
+
 }
 
 

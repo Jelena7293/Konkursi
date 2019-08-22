@@ -2,23 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb93356d-a7bb-4630-9fa7-ef89f1e79017" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/competitionModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/helperModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/professionModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Default/body2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Default/headLogout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/professorPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/studentPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/validationRegistration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/welcome.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/notApproved.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/app2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/delete2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/deleteCompetition2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/edit2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/editCompetition2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/profile2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/showCompetition2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modals/error.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/competitionModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/competitionModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/usersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/usersModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Default/body.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Default/body.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Default/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Default/head.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/adminPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/adminPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/professorPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/professorPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/studentPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/studentPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/validationRegistration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/validationRegistration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/loader_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/loader_models.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/myStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/myStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modals/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modals/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modals/signUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/modals/signUp.php" afterDir="false" />
@@ -47,7 +50,11 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1P5PYfmDRgbzCJn4A4i3ihY3RTw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -98,7 +105,8 @@
       <workItem from="1566128613819" duration="15595000" />
       <workItem from="1566197414792" duration="21289000" />
       <workItem from="1566283337547" duration="19016000" />
-      <workItem from="1566368983744" duration="1185000" />
+      <workItem from="1566368983744" duration="20629000" />
+      <workItem from="1566455844878" duration="13286000" />
     </task>
     <servers />
   </component>
@@ -117,5 +125,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

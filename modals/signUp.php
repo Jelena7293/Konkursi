@@ -1,30 +1,24 @@
 <?php
 
 include_once "config/loader_models.php";
+
 $usersModel = new usersModel();
 $professionModel=new professionModel();
 $typeProfession=$professionModel->typeProfession();
 
+
+
 if (isset($_POST['registration']))
 {
-    $usersModel -> signUp($_POST);
-    /*$check = $usersModel -> signUp($_POST);
-    if ($check == true)
+    if ($_POST["userType"]!="select" && $_POST["professionSelect"]!="selectProfession")
     {
-
-        header('Location:index.php/adminPage');
-        //echo "usla";
+        $usersModel->signUp($_POST);
     }
-    else
-    {
-        echo '<div style="width:500px" class="alert alert-warning container">
-            <strong>Upozorenje!</strong> Unijeli ste pogrešne ili nepotpune podatke!</div>';
-    }*/
+    else{
+        echo "Izaberite tip korisnika i struku";
+    }
 }
-
 ?>
-
-
 <div class="modal" id="signUpModal">
     <div class="modal-dialog">
         <div class="modal-content" style="background-color: #0a264b">
@@ -37,17 +31,23 @@ if (isset($_POST['registration']))
                 <div class="modal-body" style="font: italic bold 22px Georgia serif; color: azure; text-shadow: 1px 1px black; ">
                     <div class="form-group">
                         <label for="firstname">Ime:</label>
-                        <input type="text" class="border form-control" id="firstName" name="firstname" placeholder="Unesite ime">
+                        <input type="text" class="border form-control" id="firstName" name="firstname" placeholder="Unesite ime" required>
+                        <!--<div class="valid-feedback d-block">Valid.</div>
+                        <div class="invalid-feedback d-block">Please fill out this field.</div>-->
                     </div>
                     <div class="form-group">
                         <label for="lastname">Prezime:</label>
-                        <input type="text" class="border form-control" id="lastName" name="lastname" placeholder="Unesite prezime">
+                        <input type="text" class="border form-control" id="lastName" name="lastname" placeholder="Unesite prezime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" class="border form-control" id="email" name="email" placeholder="Unesite email" required>
                     </div>
                     <div class="form-group ">
                         <label for="usertype">Tip korisnika:</label>
-                        <select id="userType" name="userType"  type="text" class="form-control dropdown-toggle" data-toggle="dropdown">
+                        <select id="userType" name="userType"  type="text" class="form-control dropdown-toggle" data-toggle="dropdown" required>
                             <option value="select">- - - -</option>
-                            <option value="professor">Professor</option>
+                            <option value="profesor">Profesor</option>
                             <option value="student">Student</option>
                         </select>
                     </div>
@@ -56,7 +56,7 @@ if (isset($_POST['registration']))
                         <!--<input type="text" class="border form-control" id="profession" name="profession" placeholder="Izaberite oblast struke">-->
                         <div class="row">
                             <div class="col-sm-12" id="selectProfession">
-                                <select class="custom-select" name="professionSelect">
+                                <select class="custom-select" name="professionSelect" required>
                                     <option value="selectProfession">Izaberite oblast struke</option>
                                     <?php foreach ($typeProfession as $professionSelect): ?>
                                     <option value="<?= $professionSelect['id_profession']; ?>"><?= $professionSelect['profession_name']; ?></option>
@@ -67,11 +67,11 @@ if (isset($_POST['registration']))
                     </div>
                     <div class="form-group">
                         <label for="username">Korisničko ime:</label>
-                        <input type="text" class="border form-control" id="signUpUsername" name="name" placeholder="Unesite korisničko ime">
+                        <input type="text" class="border form-control" id="signUpUsername" name="name" placeholder="Unesite korisničko ime" required>
                     </div>
                     <div class="form-group">
                         <label for="pwd">Lozinka:</label>
-                        <input type="password" class="border form-control" id="signUpPwd" name="password" placeholder="Unesite lozinku">
+                        <input type="password" class="border form-control" id="signUpPwd" name="password" placeholder="Unesite lozinku" required>
                     </div>
                 </div>
                 <div class="col-lg-12">

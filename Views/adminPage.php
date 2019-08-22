@@ -52,9 +52,16 @@ include_once "Views/Default/headLogout.php";
                                 <div class="row ui-helper-clearfix">
                                     <?php foreach ($typeCompetition as $typeComp): ?>
                                         <div class="col-lg-3 col-sm-6 col-md-3">
-                                            <a href="">
-                                                <div class="box-img">
-                                                    <h4><?= $typeComp['description']; ?></h4>
+                                            <a>
+                                                <div class="box-img" style="text-align: center; color: azure">
+                                                    <div class="container">
+                                                        <h5 style="padding-top: 80px"><?= $typeComp['description']; ?></h5>
+                                                        <div class="col-md-10 text-center" style="position: absolute; bottom: 10px">
+                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Izbriši konkurs"><img src="img/delete2.png" ></button>
+                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Prikaži konkurs"><img src="img/showCompetition2.png" ></button>
+                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Izmjeni konkurs"><img src="img/editCompetition2.png" ></button>
+                                                        </div>
+                                                    </div>
                                                     <img src="" alt="" />
                                                 </div>
                                             </a>
@@ -73,11 +80,22 @@ include_once "Views/Default/headLogout.php";
                                     <?php foreach ($users as $user): ?>
                                         <div class="col-lg-3 col-sm-6 col-md-3">
                                             <a>
-                                                <div class="box-img">
-                                                    <h4> <?= $user['last_name']; ?> <?=$user['first_name'];?></h4>
-                                                    <h5><?= $user['profession_name']; ?></h5>
+                                                <div class="box-img" style="text-align: center; color: azure">
+                                                    <div class="container">
 
+                                                        <h5 style="padding-top: 80px"><?= $user['last_name']; ?> <?=$user['first_name'];?></h5>
+                                                        <h5><?= $user['profession_name']; ?></h5>
+                                                        <h5><?= $user['user_type']; ?></h5>
+                                                        <?php if ($user['approved'] == 0): ?>
+                                                        <h6 style="color: red">Nije odobren pristup!</h6>
+                                                        <?php endif; ?>
 
+                                                        <div class="col-md-10 text-center   " style="position: absolute; bottom: 10px">
+                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Izbriši korisnika"><img src="img/delete2.png" ></button>
+                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Prikaži profil korisnika"><img src="img/profile2.png" ></button>
+                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Izmjeni informacije o korisniku"><img src="img/edit2.png" ></button>
+                                                        </div>
+                                                    </div>
                                                     <img src="" alt="" />
                                                 </div>
                                             </a>
@@ -92,7 +110,7 @@ include_once "Views/Default/headLogout.php";
                     <h2 class="textHeader">Nema zahtjeva za registraciju!</h2>
                 </div>
                 <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-                    Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                    <h1 class="textHeader">Administrator!</h1>
                 </div>
             </div>
 
@@ -101,8 +119,6 @@ include_once "Views/Default/headLogout.php";
 </div>
 
 <!-- -------------------------------------------------------- -->
-
-
 
 
 </body>
