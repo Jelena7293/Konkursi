@@ -4,3 +4,4 @@ include_once 'Models/usersModel.php';
 include_once 'Models/professionModel.php';
 include_once 'Models/competitionModel.php';
 include_once 'Models/helperModel.php';
+include_once 'Models/activityModel.php';

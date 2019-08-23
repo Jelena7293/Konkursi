@@ -63,17 +63,17 @@ class usersModel
     {
         try
         {
-            if (!empty($data['firstname']) || !empty($data['lastname']) || !empty($data['userType']) || !empty($data['professionSelect']) || !empty($data['name']) || !empty($data['password'])) {
+            //if (!empty($data['firstname']) || !empty($data['lastname']) || !empty($data['userType']) || !empty($data['professionSelect']) || !empty($data['name']) || !empty($data['password'])) {
                 //echo "".$data['professionSelect'].", ".$data['userType'].",  ".$data['firstname'].", ".$data['lastname'].", ".$data['name'].", ".$data['password']."";
 
                 $sql = "INSERT INTO user(id_profession, user_type, first_name, last_name, email, username, password, approved)
                             VALUES ('" . $data['professionSelect'] . "', '" . $data['userType'] . "',  '" . $data['firstname'] . "', '" . $data['lastname'] . "', '" . $data['email'] . "', '" . $data['name'] . "', '" . $data['password'] . "', 0)";
                 $query = database::connection()->prepare($sql);
                 $query->execute();
-            } else {
-                echo "nije dobro";
+           // } else {
+              /*  echo "nije dobro";
                 return false;
-            }
+            }*/
         } catch (Exception $ex) {
             echo 'Caught exception: ', $ex->getMessage(), "\n";
         }
@@ -83,17 +83,83 @@ class usersModel
 
     public function usersList()
     {
-        try {
-            //$sql_type = "SELECT * FROM user ORDER BY last_name";
-            $sql_type = 'SELECT * FROM user, profession WHERE profession.id_profession=user.id_profession ORDER BY last_name';
+        try
+        {
 
-            $query = database::connection()->prepare($sql_type);
-            $query->execute();
-            $result_type = $query->fetchAll();
+                //$sql_type = "SELECT * FROM user ORDER BY last_name";
+                $sql_type = 'SELECT * FROM user, profession WHERE profession.id_profession=user.id_profession ORDER BY last_name';
 
-            return $result_type;
+                $query = database::connection()->prepare($sql_type);
+                $query->execute();
+                $result_type = $query->fetchAll();
+
+                return $result_type;
+
         } catch (Exception $e) {
             echo 'Caught exception: ', $e->getMessage(), "\n";
+        }
+    }
+    public function users($id=FALSE)
+    {
+        try
+        {
+            if($id!=FALSE)
+            {
+                //$sql_type = 'SELECT * FROM user, profession WHERE profession.id_profession=user.id_profession ORDER BY last_name';
+                $sql_type = "SELECT id_profession FROM user WHERE id_user=".$id;
+                $query = database::connection()->prepare($sql_type);
+                $query->execute();
+                $result_type = $query->fetch();
+                if ($result_type['id_profession']==NULL)
+                {
+                    $sql = "SELECT * FROM user WHERE id_user=".$id;
+                }
+                else
+                {
+                    $sql = 'SELECT * FROM user, profession WHERE user.id_user='.$id.'AND profession.id_profession = user.id_profession';
+                }
+                $query = database::connection()->prepare($sql);
+                $query->execute();
+                $result=$query->fetch();
+
+                return $result;
+            }
+
+        } catch (Exception $ex)
+        {
+            echo 'Caught exception: ', $ex->getMessage(), "\n";
+        }
+    }
+
+    public function adminInfo()
+    {
+        try
+        {
+            $sql = "SELECT * FROM user WHERE user_type='Administrator'";
+            $query = database::connection()->prepare($sql);
+            $query->execute();
+            $result = $query->fetch();
+            return $result;
+        }
+        catch (Exception $ex)
+        {
+            echo 'Caught exception: ', $ex->getMessage(), "\n";
+        }
+    }
+
+    public function maxId()
+    {
+        try
+        {
+            $sql= "SELECT MAX(id_user) AS max FROM user";
+            $query = database::connection()->prepare($sql);
+            $query->execute();
+            $result = $query->fetch();
+            return $result['max'];
+        }
+        catch (Exception $ex)
+        {
+            echo 'Caught exception: ', $ex->getMessage(), "\n";
         }
     }
 

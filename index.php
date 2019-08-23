@@ -11,7 +11,7 @@ include 'config/loader_models.php';
 <!--<body style="background-color: #0a264b">-->
 <?php
 include 'Views/Default/head.php';
-
+print_r($_SERVER['DOCUMENT_ROOT']);
 ?>
     <body style="background-color: #0a264b">
         <div class="container">

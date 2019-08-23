@@ -26,40 +26,35 @@ $(document).ready(function () {
         $('#signUpModal').modal('hide');
     });
 
-    $("#errorOk").on('click', function () {
-        $('#signUpModal').modal();
-    });
-
-
-
-
-
-
-    /*$('#registration').on('click',function () {
-        var form = $('signUpForm');
+    $('#registration').on('click',function () {
+        var form = $('#signUpForm');
         var form_data = form.serialize();
         var message = $('#signUpMessage');
         console.log(form_data);
         $.ajax({
             type: 'POST',
-            url: 'Views/validationRegistration.php?registration=true',
+            url: '/projekat/Views/validationRegistration.php',
             data: form_data,
             dataType: 'json',
             success: function (response) {
                 console.log(response);
-                if (response.status == true) {
+                if (response.status == true)
+                {
                     form.submit();
-                } else {
+                }
+                else
+                {
                     message.html(response.message);
-                    message.attr('hidden', false);
+                    //message.attr('hidden', false);
                 }
             },
             error: function (data, textStatus, xhrObject) {
                 alert("Error");
-                console.log(data.message);
+
             }
         })
-    })*/
+    })
+
 
 });
 
