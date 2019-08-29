@@ -17,54 +17,6 @@ $typeProfession=$professionModel->typeProfession();
     }
 }*/
 
-/*if (isset($_POST['registration']))
-{
-    $emp_firstname = trim($_POST["firstname"]);
-    $emp_lastname = trim($_POST["lastname"]);
-    $emp_email = trim($_POST["email"]);
-    $emp_userType = trim($_POST["userType"]);
-    $emp_professionSelect = trim($_POST["professionSelect"]);
-    $emp_name = trim($_POST["name"]);
-    $emp_password = trim($_POST["password"]);
-
-    if($emp_firstname == "")
-    {
-        $errorMsg = "Greška! Morate unijeti ime.";
-        $code = "1";
-    }
-    elseif($emp_lastname == "")
-    {
-        $errorMsg = "Greška! Morate unijeti prezime.";
-        $code = "2";
-    }
-    elseif($emp_email == "")
-    {
-        $errorMsg = "Greška! Morate unijeti email.";
-        $code = "3";
-    }
-    elseif($emp_userType == "select")
-    {
-        $errorMsg = "Greška! Morate izabrati tip korisnika.";
-        $code = "4";
-    }
-    elseif($emp_professionSelect == "selectProfession")
-    {
-        $errorMsg = "Greška! Morate izabrati profesiju.";
-        $code = "5";
-    }
-    elseif($emp_name == "")
-    {
-        $errorMsg = "Greška! Morate unijeti korisničko ime.";
-        $code = "6";
-    }
-    elseif($emp_password == "")
-    {
-        $errorMsg = "Greška! Morate unijeti lozinku.";
-        $code = "7";
-    }
-
-}*/
-
 ?>
 <div class="modal" id="signUpModal">
     <div class="modal-dialog">
@@ -73,12 +25,6 @@ $typeProfession=$professionModel->typeProfession();
                 <h1 class="modal-title"  style="font: italic bold 48px Georgia serif; color: azure; text-shadow: 3px 3px black; ">Registracija</h1>
                 <button type="button" class="close" data-dismiss="modal">X</button>
             </div>
-            <?php
-            /*if (isset($errorMsg))
-            {
-                echo "<a style='color: red; font-weight:bold; text-align: center; margin-top: 10px; margin-bottom: -20px' class='message'>" .$errorMsg. "</a>";
-            }*/
-            ?>
             <form action="" method="post" id="signUpForm" autocomplete="off" autocomplete="off">
                 <div class="alert alert-warning" role="alert" id="signUpMessage" hidden="true"></div>
                 <div class="modal-body" style="font: italic bold 22px Georgia serif; color: azure; text-shadow: 1px 1px black; ">

@@ -2,28 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb93356d-a7bb-4630-9fa7-ef89f1e79017" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/activityModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/registration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/approvedModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/change.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/validationLogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/close2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/save2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/verified2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modals/approved.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modals/userProfile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/activityModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/activityModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/usersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/usersModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Default/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Default/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/adminPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/adminPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/validationRegistration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/validationRegistration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/loader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/loader_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/loader_models.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap-select.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-1.12.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.nicescroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.scrollbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/select2.full.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/slick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/wow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modals/error.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modals/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modals/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modals/signUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/modals/signUp.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,6 +109,12 @@
       <workItem from="1566368983744" duration="20629000" />
       <workItem from="1566455844878" duration="17836000" />
       <workItem from="1566543490493" duration="14649000" />
+      <workItem from="1566801716863" duration="108000" />
+      <workItem from="1566802438907" duration="125000" />
+      <workItem from="1566802582918" duration="19928000" />
+      <workItem from="1566888983756" duration="18394000" />
+      <workItem from="1566975145094" duration="17784000" />
+      <workItem from="1567061422419" duration="17317000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 include_once "config/loader_models.php";
 $usersModel = new usersModel();
 
@@ -28,7 +28,7 @@ if (isset($_POST['login']))
                 <h1 class="modal-title"  style="font: italic bold 48px Georgia serif; color: azure; text-shadow: 3px 3px black; ">Login</h1>
                 <button type="button" class="close" data-dismiss="modal">X</button>
             </div>
-            <form action="" method="post" id="loginForm" autocomplete="off">
+            <form action="" method="post" id="loginForm" autocomplete="off" autocomplete="off">
                 <div class="alert alert-warning" role="alert" id="loginMessage" hidden="true"></div>
                 <div class="modal-body" style="font: italic bold 22px Georgia serif; color: azure; text-shadow: 1px 1px black; ">
                     <div class="form-group">
@@ -42,7 +42,8 @@ if (isset($_POST['login']))
                 </div>
                 <div class="col-lg-12">
                     <div class="modal-footer row">
-                        <button type="submit" class="btn btn-primary" name="login">Uloguj se</button>
+<!--                        <button type="button" class="btn btn-primary" id="login" name="login">Uloguj se</button>-->
+                        <button type="submit" class="btn btn-primary" id="login" name="login">Uloguj se</button>
                     </div>
                     <div class="row" style="font: italic bold 16px Georgia serif; color: azure; text-shadow: 1px 1px black; margin: 10px">
                         <div  style="margin: 5px">

@@ -13,6 +13,18 @@ $typeCompetition = $competitionModel->competitionList();
 
 $usersModel = new usersModel();
 $users = $usersModel->usersList();
+
+$approvedModel = new approvedModel();
+$approved = $approvedModel->approved();
+
+$activityModel = new activityModel();
+//$activity = $activityModel->updateApproved();
+
+/*if (isset($_POST['approved']))
+{
+    $activityModel->updateApproved($_POST);
+}*/
+
 ?>
 <body>
 <!--<div class="row">
@@ -92,8 +104,10 @@ include_once "Views/Default/headLogout.php";
 
                                                         <div class="col-md-10 text-center   " style="position: absolute; bottom: 10px">
                                                             <button class="btn btn-secondary" data-toggle="tooltip" title="Izbriši korisnika"><img src="img/delete2.png" ></button>
-                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Prikaži profil korisnika"><img src="img/profile2.png" ></button>
-                                                            <button class="btn btn-secondary" data-toggle="tooltip" title="Izmjeni informacije o korisniku"><img src="img/edit2.png" ></button>
+<!--                                                        <button class="btn btn-secondary view-profile" type="button" id="--><?//= $app['id_user']; ?><!--"  title="Prikaži profil korisnika"><img src="img/profile2.png" ></button>-->
+                                                            <button class="btn btn-secondary view-profile" type="button" id="<?= $user['id_user']; ?>" title="Prikaži profil korisnika"><img src="img/profile2.png" ></button>
+                                                            <button class="btn btn-secondary view-profile" type="button" id="<?= $user['id_user']; ?>" title="Izmjeni informacije o korisniku"><img src="img/edit2.png" ></button>
+<!--                                                        <button class="btn btn-secondary" data-toggle="tooltip" title="Izmjeni informacije o korisniku"><img src="img/edit2.png" ></button>-->
                                                         </div>
                                                     </div>
                                                     <img src="" alt="" />
@@ -108,6 +122,38 @@ include_once "Views/Default/headLogout.php";
                 </div>
                 <div class="tab-pane fade" id="nav-request" role="tabpanel" aria-labelledby="nav-request-tab">
                     <h2 class="textHeader">Nema zahtjeva za registraciju!</h2>
+                    <div class="page-content-product">
+                        <div class="main-product">
+                            <div class="container">
+                                <div class="row ui-helper-clearfix">
+                                    <?php foreach ($approved as $app): ?>
+                                        <div class="col-lg-3 col-sm-6 col-md-3">
+                                            <a>
+                                                <div class="box-img" style="text-align: center; color: azure">
+                                                    <div class="container">
+
+                                                        <h5 style="padding-top: 80px"><?= $app['last_name']; ?> <?=$app['first_name'];?></h5>
+<!--                                                        <h5>--><?//= $app['profession_name']; ?><!--</h5>-->
+<!--                                                        <h5>--><?//= $app['user_type']; ?><!--</h5>-->
+                                                        <?php if ($app['approved'] == 0): ?>
+                                                            <h6 style="color: red">Nije odobren pristup!</h6>
+                                                        <?php endif; ?>
+                                                        <div class="col-md-10 text-center   " style="position: absolute; bottom: 10px">
+                                                            <form method="post" id="rrrrr">
+                                                                <button class="btn btn-secondary view-profile" type="button" id="<?= $app['id_user']; ?>"  title="Prikaži profil korisnika"><img src="img/profile2.png" ></button>
+                                                                <button type="button" name="view"  id="<?= $app['id_user']; ?>" class="btn btn-secondary view_data" title="Odobri pristup korisniku"><img src="img/verified2.png" ></button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <img src="" alt="" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
                     <h1 class="textHeader">Administrator!</h1>
@@ -118,7 +164,27 @@ include_once "Views/Default/headLogout.php";
     </div>
 </div>
 
+<!--<div id="dataModal" class="modal fade">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+<!--                <h4 class="modal-title">Employee Details</h4>-->
+<!--            </div>-->
+<!--            <div class="modal-body" id="user_detail">-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
 <!-- -------------------------------------------------------- -->
+<?php
+include_once 'modals/approved.php';
+include_once 'modals/userProfile.php';
+?>
 
 
 </body>

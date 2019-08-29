@@ -6,11 +6,13 @@ if (!isset($_SESSION["id"])) {
     }
 }
 */
+session_start();
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="Assets/jquery.js"></script>
 
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,13 +25,14 @@ if (!isset($_SESSION["id"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>-->
-    <script src="Assets/jquery.js"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script src="Assets/script.js"></script>
 
     <link rel="stylesheet" href="css/myStyle.css">
-    <script src="Assets/script.js"></script>
+
 
 
     <title>Konkursi</title>
@@ -61,6 +64,7 @@ if (!isset($_SESSION["id"])) {
 <?php
 include_once "modals/login.php";
 include_once "modals/signUp.php";
+include_once "Views/registration.php";
 
 ?>
 </body>

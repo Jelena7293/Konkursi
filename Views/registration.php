@@ -7,7 +7,7 @@ $userModel = new usersModel();
 if (isset($_POST['name']))
 {
     $userModel->signUp($_POST);
-    $users=$userModel->users();
+    /*$users=$userModel->users();
     $admin = $userModel->adminInfo();
     $id_last_user = $userModel->maxId();
     $link = 'http://localhost/projekat/index.php?view=studentPage&id='.$id_last_user;
@@ -23,5 +23,6 @@ if (isset($_POST['name']))
     else
     {
         echo "error";
-    }
+    }*/
 }
+
